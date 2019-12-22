@@ -1,0 +1,6 @@
+organization:
+  name: konchanxxx
+  repos:
+    pr-bot:
+      from: master
+      to: release/production
