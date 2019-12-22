@@ -22,7 +22,7 @@ get '/' do
     res = PullRequest.create(repository_full_name, to, from)
     status 200
 
-    text = "Successfully created a pull request!! :rocket:\n#{res['url']}"
+    text = "Successfully created a pull request!! :rocket:\n#{res['html_url']}"
   rescue Octokit::UnprocessableEntity => e
     status 200
     STDOUT.puts "Failed to create pull request. err=#{e}"
